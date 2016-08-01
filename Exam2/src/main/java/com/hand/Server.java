@@ -24,7 +24,7 @@ public class Server {
 			FileOutputStream fos=new FileOutputStream("target_new.pdf");
 			BufferedOutputStream bis=new BufferedOutputStream(fos);
 			    
-			byte[] input =new byte[1000];
+			byte[] input =new byte[1024];
 			while(in.read(input)!=-1){
 					bis.write(input);
 			}
@@ -36,10 +36,8 @@ public class Server {
 			socket.close();
 			ss.close();  
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}  
     }
